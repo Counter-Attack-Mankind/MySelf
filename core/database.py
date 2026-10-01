@@ -166,16 +166,3 @@ def save_style_observation(turn_id: int, observation_text: str, confidence: floa
             (turn_id, observation_text, confidence),
         )
         return cursor.lastrowid
-
-
-def get_interview_dimension_counts():
-    with get_connection() as conn:
-        rows = conn.execute(
-            """
-            SELECT communication_goal, COUNT(*)
-            FROM interview_turns
-            WHERE communication_goal IS NOT NULL
-            GROUP BY communication_goal
-            """
-        ).fetchall()
-    return dict(rows)
