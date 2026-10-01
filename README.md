@@ -1,3 +1,4 @@
+```text
 ┌──────────────────────────────┐
 │         Qwen3 1.7B           │
 │         基础大脑              │
@@ -35,3 +36,4 @@ Personality Profile   Personality LoRA
         LoRA Training Dataset
                  ↓
           Personality LoRA
+```
